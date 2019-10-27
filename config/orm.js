@@ -6,7 +6,7 @@ var orm = {
         connection.query(
             "SELECT * FROM ??", 
             table, // this is the table name (burgers)
-            function(err, data) {
+            function(err, result) {
                 if (err) throw err;
                 //Setting the variable cb to the value of result and returning it to the function that called this one.
                 cb(result);
@@ -53,7 +53,7 @@ var orm = {
                 cb(result);
             }
         )
-    };
-}
+    }
+};
 
 module.exports = orm;
