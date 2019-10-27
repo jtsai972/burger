@@ -11,11 +11,19 @@
 <section id="burger-list">
   <div id="uneaten">
     <h2>Burgers to Try</h2>
-
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burgers/burger-block}}
+      {{/unless}}
+    {{/each}}
   </div>
   <div id="eaten">
     <h2>Burgers I've Eaten</h2>
-    
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burgers/burger-block}}
+      {{/if}}
+    {{/each}}
   </div>
 </section>
 
