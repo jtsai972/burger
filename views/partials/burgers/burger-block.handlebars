@@ -1,9 +1,39 @@
 <div class="burger">
-	{{burger_name}}
 
-	{{#unless devoured}}
-	<button class="change-devoured" data-id="{{id}}">
-		Eat this burger!
-	</button>
-	{{/unless}}
+	<p class="name">{{burger_name}}</p>
+
+	<div class="action">
+		{{! If Uneaten add an eat button}}
+		{{#unless devoured}}
+			<button class="change-devoured" data-id="{{id}}">
+				Eat this burger!
+			</button>
+		{{/unless}}
+
+		<button class="delete" data-id="{{id}}">
+			<i class="material-icons"></i>
+		</button>
+
+		{{! If Eaten, option to review}}
+		{{#if devoured}}
+			<div class="review" data-id="{{id}}">
+				<div class="rate"> 
+					{{! five star review is empty}}
+					<i class="material-icons"> star_border </i>
+					<i class="material-icons"> star_border </i>
+					<i class="material-icons"> star_border </i>
+					<i class="material-icons"> star_border </i>
+					<i class="material-icons"> star_border </i>
+				</div>
+				<form>
+					<label for="burger-review">
+						<input id="burger-review" type="textarea" name="review">
+						<button>submit</button>
+					</label>
+				</form>
+			</div>
+		{{/if}}
+
+	</div>
+
 </div>
