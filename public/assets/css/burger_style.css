@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  transition: ease all 0.5s;
+}
+html {
+  background: #222 url("../img/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg") no-repeat center/cover;
+  background-image: url("../img/call-me-hangry-CspPycdSs2E-unsplash.jpg");
+  background-image: url("../img/ilya-mashkov-_qxbJUr9RqI-unsplash.jpg");
+  background-image: url("../img/mae-mu-I7A_pHLcQK8-unsplash.jpg");
+}
+body {
+  background: rgba(0,0,0,0.25);
+  color: #e4e4e4;
+  display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: flex-start;
+  margin: 0 auto;
+  padding: 2em 0;
+  min-height: 100vh;
+}
+
+/* ---------------------------------------------
+ * TEXT STYLING
+ * --------------------------------------------- */
+
+  /* HEADERS */
+  h1, h2, h3 {
+    font-family: 'Merienda', cursive;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+    h1 { font-size: 2.5em; margin-bottom: 0; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em;}
+
+  /* CONTENT */
+  body, input, button { 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1em;
+  }
+
+/* ---------------------------------------------
+ * LINK STYLING
+ * --------------------------------------------- */
+  
+  a { text-decoration: none; }
+  a:hover { }
+
+/* ---------------------------------------------
+ * Button STYLING
+ * --------------------------------------------- */
+
+  button {
+    display: inline-flex;
+      align-content: center;
+      justify-content: center;
+  }
+
+/* ---------------------------------------------
+ * ICON STYLING
+ * --------------------------------------------- */
+  
+  .material-icons::before { 
+    color: white;
+    display: flex;
+    font-family: 'Material Icons';
+    font-size: 1.5rem; 
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .delete .material-icons::before {
+    content: "delete_outline";
+  }
+  .delete:hover .material-icons::before {
+    content: "delete";
+  }
+
+/* ---------------------------------------------
+ * LAYOUT STYLING
+ * --------------------------------------------- */
+
+header, footer {
+  text-align: center;
+}
+main {
+  margin: 0 auto;
+  width: 90%;
+    max-width: 1200px;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* ---------------------------------------------
+ * MAIN SECTION STYLING
+ * --------------------------------------------- */
+  /* SECTION STYLING */
+  section {
+    margin: 2em auto;
+  }
+
+  /* BORDERS */
+  #add-burger, #add-valid,
+  form input, form button,
+  .panel, .burger,
+  .action button {
+    background: none;
+    border: 0.1em solid white;
+    border-radius: 0.5em;
+    color: white;
+  }
+
+
+/* ---------------------------------------------
+ * ADD A BURGER STYLING
+ * --------------------------------------------- */
+
+  #add-burger {
+    display: flex;
+      flex-flow: column;
+    padding: 2em;
+  }
+  form, form input, form button {
+    text-align: center;
+  }
+  form input, form button {
+    background: none;
+    color: white;
+    border-color: transparent;
+    margin: 0 1em;
+    padding: 0.5em 2em;
+  }
+  form input { 
+    border-bottom-color: white; 
+    border-radius: 0;
+  }
+    form input::placeholder { color: white;}
+  form button {
+    background: rgba(0,0,0,0.5);
+  }
+  #add-valid {
+    background: rgba(255, 255, 255, 0.25);
+    display: none;
+    margin: 0 auto;
+      margin-top: 1em;
+    padding: 0.5em 1em;
+    text-align: center;
+  }
+    #add-valid.active { display: inline-block; }
+
+/* ---------------------------------------------
+ * BURGER BUCKET LISTS
+ * --------------------------------------------- */
+
+  /* SECTION STYLING */
+  #burger-list {
+    display: flex;
+      flex-flow: row;
+  }
+
+  /* PANEL STYLING */
+  .panel {
+    flex: 1 1 40%;
+    padding: 1em 2em;
+  }
+    .panel:first-of-type { margin-right: 2em;}
+
+  /* BURGER DIV STYLING */
+  .burger {
+    background: rgba(255, 255, 255, 0.25);
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    margin: 1em auto;
+    padding:1em;
+  }
+    .burger p {
+      line-height: 2em; /* button padding included */
+    }
+    .action {
+      display: inline-flex;
+      margin-left: 0.5em;
+    }
+      .action button {
+        background: rgba(0,0,0,0.25);        
+        padding: 0.25em;
+        margin-left: 0.5rem;
+      }
+      .action button:hover {
+        background: rgba(0,0,0,0.75);
+      }
+    .review {
+      display: flex;
+        flex-direction: column;
+    }
+
+/* ---------------------------------------------
+ * MEDIA QUERIES
+ * --------------------------------------------- */
+
+  @media screen and (max-width: 900px) {
+    .burger {
+      flex-flow: column;
+    }
+    .action {
+      margin: 0.5em 0;
+    }
+  }
