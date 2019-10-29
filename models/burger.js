@@ -1,5 +1,7 @@
 const orm = require("../config/orm");
 
+console.log("burger model");
+
 var burger = {
     //This is for printing all the burgers
     all: function(cb) {

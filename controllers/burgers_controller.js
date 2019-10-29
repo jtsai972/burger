@@ -1,6 +1,8 @@
 const express = require("express");
 const burger = require("../models/burger");
 
+console.log("router");
+
 const router = express.Router();
 
 // * HANDLING GET REQUEST: return all burgers in the db

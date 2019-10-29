@@ -52,22 +52,33 @@ body {
  * --------------------------------------------- */
 
   button {
+    background: rgba(200, 50, 50, 0.5);
+    color: white;
     display: inline-flex;
       align-content: center;
       justify-content: center;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  button:hover {
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
   }
 
 /* ---------------------------------------------
  * ICON STYLING
  * --------------------------------------------- */
   
+  .material-icons { transition: none; }
+
   .material-icons::before { 
-    color: white;
     display: flex;
     font-family: 'Material Icons';
     font-size: 1.5rem; 
     font-style: normal;
     font-weight: normal;
+    transition: none;
   }
 
   .delete .material-icons::before {
@@ -107,10 +118,8 @@ footer {
   form input, form button,
   .panel, .burger,
   .action button {
-    background: none;
     border: 0.1em solid white;
     border-radius: 0.5em;
-    color: white;
   }
 
 
@@ -123,24 +132,23 @@ footer {
       flex-flow: column;
     padding: 2em;
   }
-  form, form input, form button {
+  form, form input {
     text-align: center;
   }
   form input, form button {
-    background: none;
-    color: white;
-    border-color: transparent;
     margin: 0 1em;
     padding: 0.5em 2em;
   }
   form input { 
-    border-bottom-color: white; 
-    border-radius: 0;
+    background: none;
+    border-color: transparent;
+      border-bottom-color: white; 
+      border-radius: 0;
+    color: white;
+    text-align: center;
   }
     form input::placeholder { color: white;}
-  form button {
-    background: rgba(0,0,0,0.5);
-  }
+
   #add-valid {
     background: rgba(255, 255, 255, 0.25);
     display: none;
@@ -171,6 +179,7 @@ footer {
   /* BURGER DIV STYLING */
   .burger {
     background: rgba(255, 255, 255, 0.25);
+    background: rgba(0,0,0,0.5);
     display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -184,13 +193,9 @@ footer {
       display: inline-flex;
       margin-left: 0.5em;
     }
-      .action button {
-        background: rgba(0,0,0,0.25);        
+      .action button {       
         padding: 0.25em;
         margin-left: 0.5rem;
-      }
-      .action button:hover {
-        background: rgba(0,0,0,0.75);
       }
     .review {
       display: flex;
@@ -201,7 +206,7 @@ footer {
  * MEDIA QUERIES
  * --------------------------------------------- */
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     .burger {
       flex-flow: column;
     }

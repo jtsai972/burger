@@ -1,5 +1,4 @@
 require("dotenv").config({path: __dirname + "./../.env"});
-
 module.exports = {
     host: process.env.DB_HOST,
     port: process.env.PORT || process.env.DB_PORT,
