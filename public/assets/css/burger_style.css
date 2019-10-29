@@ -25,14 +25,14 @@ body {
  * --------------------------------------------- */
 
   /* HEADERS */
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: 'Merienda', cursive;
     margin-bottom: 0.5em;
     text-align: center;
   }
-    h1 { font-size: 2.5em; margin-bottom: 0; }
+    h1 { font-size: 2.75em; margin-bottom: 0; }
     h2 { font-size: 2em; }
-    h3 { font-size: 1.5em;}
+    h3 { font-size: 1.25em;}
 
   /* CONTENT */
   body, input, button { 
@@ -87,7 +87,13 @@ body {
   .delete:hover .material-icons::before {
     content: "delete";
   }
-
+  .rate .material-icons::before {
+    content: "star_border";
+  }
+  .rate .material-icons:hover::before,
+  .rating materials-icons:hover ~ material-icons::before{
+    content: "star";
+  }
 /* ---------------------------------------------
  * LAYOUT STYLING
  * --------------------------------------------- */
@@ -117,7 +123,7 @@ footer {
   #add-burger, #add-valid,
   form input, form button,
   .panel, .burger,
-  .action button {
+  .action button, .review {
     border: 0.1em solid white;
     border-radius: 0.5em;
   }
@@ -186,8 +192,9 @@ footer {
     margin: 1em auto;
     padding:1em;
   }
-    .burger p {
-      line-height: 2em; /* button padding included */
+    .burger h3 {
+      line-height: 2rem; /* button padding included */
+      margin: 0;
     }
     .action {
       display: inline-flex;
@@ -200,6 +207,14 @@ footer {
     .review {
       display: flex;
         flex-direction: column;
+      margin-top: 1em;
+      padding: 1em;
+      width: 100%;
+      /* Temporary */
+      display: none;
+    }
+    .rate {
+      text-align: center;
     }
 
 /* ---------------------------------------------

@@ -17,9 +17,9 @@ var orm = {
     insertOne: function(table, newBurger, cb) {
         //INSERT INTO
         connection.query(
-            "INSERT INTO ?? VALUES ?",
+            "INSERT INTO ?? (burger_name) VALUES (?)",
 			// ["burgers", new burger we're adding ]
-            [table, {name: newBurger}], 
+            [table, newBurger], 
             function(err, result) {
                 if(err) throw err;
                 //Setting the variable cb to the value of result and returning it to the function that called this one.
@@ -29,6 +29,7 @@ var orm = {
 
     },
     updateOne: function(table, isEaten, id, cb) {
+        console.log("In orm: " + isEaten + " " + id);
         //UPDATE SET
         connection.query(
             "UPDATE ?? SET ? WHERE ?",

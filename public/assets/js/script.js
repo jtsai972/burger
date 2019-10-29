@@ -7,17 +7,17 @@
 //creating burger
 $("#add-burger button").on("click", function(event) { 
   event.preventDefault(); 
-  let burgerData = $("#new-burger").val().trim();
+  let burgerName = $("#new-burger").val().trim();
 
-  console.log("Add Burger Button clicked");
+  console.log(`Add Burger Button clicked: ${burgerName}`);
 
   $("#add-valid").addClass("active");
 
-  if( burgerData !== "" ) {
+  if( burgerName !== "" ) {
 
     // AJAX post the data to the friends API.
-    $.post("/api/burgers", burgerData, function(data) {
-      console.log("Post data");
+    $.post("/api/burgers", {name: burgerName}, function(data) {
+      console.log(`Created a new burger: ${burgerName}`);
       location.reload();
     });
 
@@ -33,39 +33,39 @@ $("#add-burger button").on("click", function(event) {
  * ------------------------------------------------------------ */
 
 $(".burger button.change-devoured").on("click", function() {
-  console.log("Eating the burger " + $(this).data("id"));
+  let id = $(this).data("id");
+  let burger = $(this).children("p").text();
+  
   // Send the PUT request.
-
-  $.ajax("/api//" + id, {
+  $.ajax("/api/burgers/" + id, {
     type: "PUT",
-    data: newSleepState
+    data: {devoured: 1}
   }).then(
     function() {
-      console.log("changed sleep to", newSleep);
+      console.log("Ate burger: " + burger);
       // Reload the page to get the updated list
       location.reload();
     }
   );
-  $.put("/api/friends/:id", function(data) {
-    console.log("changed sleep to", newSleep);
-    // Reload the page to get the updated list
-    location.reload();
-    //update burger status
-  });
-  
-
 });
 
 $(".burger button.delete").on("click", function() {
-  console.log("Deleting the burger " + $(this).data("id"));
+  let id = $(this).data("id");
+  let burger = $(this).children("p").text();
   //delete burger
+  $.ajax("/api/burgers/" + id, {
+    type: "DELETE"
+  }).then( function() {
+    console.log("Deleting the burger " + burger);
+    location.reload();
+  })
 });
 
 $(".burger .rate").on("click", function() {
   console.log("Rating the burger " + $(this).data("id"));
 });
 
-$(".burger form button").on("click", function() {
-  console.log("Reviewing the burger " + $(this).data("id"));
-});
+// $(".burger form button").on("click", function() {
+//   console.log("Reviewing the burger " + $(this).data("id"));
+// });
 

@@ -1,6 +1,6 @@
 <div class="burger">
 
-	<p class="name">{{burger_name}}</p>
+	<h3 class="name">{{burger_name}}</h3>
 
 	<div class="action">
 		{{! If Uneaten add an eat button}}
@@ -13,27 +13,27 @@
 		<button class="delete" data-id="{{id}}">
 			<i class="material-icons"></i>
 		</button>
-
-		{{! If Eaten, option to review}}
-		{{#if devoured}}
-			<div class="review" data-id="{{id}}">
-				<div class="rate"> 
-					{{! five star review is empty}}
-					<i class="material-icons" data-value="1"> star_border </i>
-					<i class="material-icons" data-value="2"> star_border </i>
-					<i class="material-icons" data-value="3"> star_border </i>
-					<i class="material-icons" data-value="4"> star_border </i>
-					<i class="material-icons" data-value="5"> star_border </i>
-				</div>
-				<form>
-					<label for="burger-review">
-						<input id="burger-review" type="textarea" name="review">
-						<button>submit</button>
-					</label>
-				</form>
-			</div>
-		{{/if}}
-
 	</div>
+
+	{{! If Eaten, option to review}}
+	{{#if devoured}}
+		<div class="review" data-id="{{id}}">
+			<h4>Rate your burger</h4>
+			<div class="rate"> 
+				{{! five star review is empty}}
+				<i class="material-icons" data-value="1"></i>
+				<i class="material-icons" data-value="2"></i>
+				<i class="material-icons" data-value="3"></i>
+				<i class="material-icons" data-value="4"></i>
+				<i class="material-icons" data-value="5"></i>
+			</div>
+			{{!-- <form>
+				<label for="burger-review">
+					<input id="burger-review" type="textarea" name="review">
+					<button>submit</button>
+				</label>
+			</form> --}}
+		</div>
+	{{/if}}
 
 </div>

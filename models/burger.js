@@ -1,7 +1,5 @@
 const orm = require("../config/orm");
 
-console.log("burger model");
-
 var burger = {
     //This is for printing all the burgers
     all: function(cb) {
@@ -19,7 +17,7 @@ var burger = {
     // This is for updating the burgers eaten status
     // Could change this to update burger name
     update: function(isEaten, id, cb){
-        orm.updateOne("burgers", isEaten, id, function(res) {
+        orm.updateOne("burgers", isEaten.devoured, id, function(res) {
             cb(res);
         });
     },
