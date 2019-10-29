@@ -1,9 +1,9 @@
 // * REQUIREMENTS
 const mysql = require('mysql');
 const auth = require("./serverAuth")
+const jaws = process.env.JAWSDB_URL
 
-
-const connection = mysql.createConnection(auth);
+var connection = mysql.createConnection( jaws ? jaws : auth);
 
 // Make connection.
 connection.connect(function(err) {
