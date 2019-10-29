@@ -29,7 +29,7 @@ var orm = {
 
     },
     updateOne: function(table, isEaten, id, cb) {
-        console.log("In orm: " + isEaten + " " + id);
+        // console.log("In orm: " + isEaten + " " + id);
         //UPDATE SET
         connection.query(
             "UPDATE ?? SET ? WHERE ?",
