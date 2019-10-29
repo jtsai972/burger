@@ -193,16 +193,21 @@ footer {
     padding:1em;
   }
     .burger h3 {
-      line-height: 2rem; /* button padding included */
-      margin: 0;
+      line-height: 2rem;
+      margin: 0 0.5rem;
     }
     .action {
       display: inline-flex;
-      margin-left: 0.5em;
+        flex-wrap: nowrap;
+        justify-content: center;
+      margin: 0 0.5em;
     }
       .action button {       
-        padding: 0.25em;
+        padding: 0.25em 0.5em;
         margin-left: 0.5rem;
+      }
+      .action .delete {
+        padding: 0.25em;
       }
     .review {
       display: flex;
@@ -221,7 +226,7 @@ footer {
  * MEDIA QUERIES
  * --------------------------------------------- */
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     .burger {
       flex-flow: column;
     }
