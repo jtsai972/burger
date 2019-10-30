@@ -10,17 +10,17 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">Eat-Da-Burger!</h3>
+  <h3 align="center">Burger Bucket List</h3>
 
   <p align="center">
-    My first foray into building an app using Node, Express, and Heroku
+    My first foray into building an app using Node, Express, and Heroku and burgers.
     <br />
     <a href="https://github.com/jtsai972/burger"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!-- <a href="https://whispering-plains-97873.herokuapp.com/"><strong>Try it out on Heroku »</strong></a>
+    <a href="https://glacial-oasis-67567.herokuapp.com/"><strong>Try it out on Heroku »</strong></a>
     <br />
-    <br /> -->
+    <br />
     <a href="https://github.com/jtsai972/burger/issues">Report Bug</a>
     ·
     <a href="https://github.com/jtsai972/burger/issues">Request Feature</a>
@@ -83,7 +83,7 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-<!-- You can try this out on [Heroku](https://whispering-plains-97873.herokuapp.com/survey) -->
+You can try this out on [Heroku](https://glacial-oasis-67567.herokuapp.com/)
 
 Command to run this program is `node server` in the root directory of this program. (The one with the server.js file)
 
