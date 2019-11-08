@@ -18,7 +18,8 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
     <a href="https://github.com/jtsai972/burger"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://glacial-oasis-67567.herokuapp.com/"><strong>Try it out on Heroku »</strong></a>
+    <a href="https://jtsai972-burger.herokuapp.com/"><strong>Try it out on Heroku »</strong></a>
+    <!-- <a href="https://glacial-oasis-67567.herokuapp.com/"><strong>Try it out on Heroku »</strong></a> -->
     <br />
     <br />
     <a href="https://github.com/jtsai972/burger/issues">Report Bug</a>
@@ -83,7 +84,7 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-You can try this out on [Heroku](https://glacial-oasis-67567.herokuapp.com/)
+You can try this out on [Heroku](https://jtsai972-burger.herokuapp.com/)
 
 Command to run this program is `node server` in the root directory of this program. (The one with the server.js file)
 
@@ -110,7 +111,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Project Link: [https://github.com/jtsai972/burger](https://github.com/jtsai972/burger)
 
-<!-- Heroku Link: [Heroku App](https://whispering-plains-97873.herokuapp.com/) -->
+Heroku Link: [Heroku App](https://jtsai972-burger.herokuapp.com/)
 
 [Back to Table of Contents](#table-of-contents)
 
